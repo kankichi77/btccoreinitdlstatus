@@ -1,5 +1,7 @@
 import os, subprocess, time
 #os.system("clear")
+
+os.system("date")
 bc_current = int(subprocess.check_output(["bitcoin-cli", "getblockcount"]).decode("utf-8"))
 bc_height = int(subprocess.check_output(["wget", "-O", "-", "https://blockchain.info/q/getblockcount"],stderr=subprocess.DEVNULL).decode("utf-8"))
 bc_diff = bc_height - bc_current
